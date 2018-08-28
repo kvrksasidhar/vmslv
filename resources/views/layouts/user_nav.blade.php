@@ -28,6 +28,7 @@
                 <button class="btn btn-warning dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{ auth()->user()->name}}
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation">{{ Auth::user()->role }}</li>
                     <li role="presentation"><a role="menuitem" href="/vmslv/editProfile">Edit Profile</a></li>
                     <li class="divider"></li>
                     <li role="presentation"><a role="menuitem" href="/vmslv/signout">Signout</a></li>
