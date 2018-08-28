@@ -19,5 +19,4 @@ Route::get('/signup', 'RegistrationController@create');
 
 Route::post('/registerUser', 'RegistrationController@store');
 
-
-
+Route::get('/userHome', 'UserController@index')->name('userHome');
