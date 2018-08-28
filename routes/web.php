@@ -20,3 +20,4 @@ Route::get('/signup', 'RegistrationController@create');
 Route::post('/registerUser', 'RegistrationController@store');
 
 
+

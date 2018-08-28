@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
-        .footer {
+        html {
             position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 80px; /* Margin bottom by footer height */
+        }
+        .footer {
+            position: absolute;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -18,7 +25,6 @@
             color: white;
             text-align: center;
             padding-top: 1%;
-            margin-top:2%;
         }
     </style>
 </head>
