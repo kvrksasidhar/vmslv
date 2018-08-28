@@ -24,13 +24,15 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form> --}}
       <div class="navbar-nav ml-auto">
-            <form method="POST" action="">
-                <select class="form-control" name="userOptions" id="userOptions">
-                    <option></option>
-                    <option value="edit">Edit Profile</option>
-                    <option value="signout">Signout</option>
-                </select>
-            </form>
+            <div class="dropdown">
+                <button class="btn btn-warning dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">{{ auth()->user()->name}}
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" href="/vmslv/editProfile">Edit Profile</a></li>
+                    <li class="divider"></li>
+                    <li role="presentation"><a role="menuitem" href="/vmslv/signout">Signout</a></li>
+                </ul>
+            </div>
       </div>
     </div>
   </nav>

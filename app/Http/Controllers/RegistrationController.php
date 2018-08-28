@@ -51,10 +51,10 @@ class RegistrationController extends Controller
                 {
                     auth()->login($user);   //Sign them in
 
-                    return redirect('/userHome');  //Redirecting to their respective homepage
+                    return redirect('/dashboard');  //Redirecting to their respective homepage
                 }
         }else{
-            return "User Already exists";
+            return redirect('/dashboard');  //Redirecting to their respective homepage
         }
 
     }

@@ -7,7 +7,8 @@
         </div>
         <div class="card-body">
             {{--<h5 class="card-title">Special title treatment</h5>--}}
-            <form action="/vmslv/login" method="post">
+            <form action="/vmslv/signin" method="post">
+                {{ csrf_field() }}
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email" id="email" required/>

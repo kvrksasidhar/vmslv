@@ -19,4 +19,12 @@ Route::get('/signup', 'RegistrationController@create');
 
 Route::post('/registerUser', 'RegistrationController@store');
 
-Route::get('/userHome', 'UserController@index')->name('userHome');
+Route::get('/dashboard', 'UserController@index')->name('dashboard');
+
+Route::get('/home', 'UserController@index')->name('dashboard');
+
+Route::get('/signin', 'SessionsController@create');
+
+Route::post('/signin', 'SessionsController@store');
+
+Route::get('/signout', 'SessionsController@destroy');
