@@ -14,6 +14,7 @@ class SessionsController extends Controller
         $this->middleware('guest', ['except' => 'destroy']);
     }
 
+
     /**
      *
      */
