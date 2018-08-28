@@ -29,11 +29,19 @@ class SessionsController extends Controller
      */
     public function store()
     {
+        //Validating
+        $this->validate(request(),[
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
         //Attempt to Authenticate the user
         if(!auth()->attempt(request(['email', 'password'])))
         {
             //If not, redirect back
-            return back();
+            return back()->withErrors([
+                'message' => 'Please check your credentials and try again.'
+            ]);
         }else{
             //Redirect to homepage
             return redirect('/dashboard');

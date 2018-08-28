@@ -11,19 +11,23 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required/>
+                    <input type="email" class="form-control" name="email" id="email" />
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" required>
+                    <input type="password" class="form-control" name="password" id="password" >
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="rememberMe">
                     <label class="form-check-label" for="rememberMe">Remember Me</label>
                     <a href="/vmslv/forgotpassword" class="float-right">Forgot Password</a>
                 </div>
-                <input type="submit" class="btn btn-primary btn-block" value="Login"/>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Login"/>
+                </div>
             </form>
+
+            @include('layouts.errors')
         </div>
     </div>
 @endsection
