@@ -15,7 +15,7 @@
         <input class="form-control" type="text" name="mobile" id="mobile"/>
     </div>
 
-        <div class="form-group">
+    <div class="form-group">
         <label for="password">Password</label>
         <input class="form-control" type="password" name="password" id="password" required/>
     </div>
