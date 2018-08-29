@@ -19,8 +19,36 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('user.user_home');
+        switch(auth()->user()->role)
+        {
+            case 'Super Admin':
+                return view('user.super_admin_home');
+            break;
+            case 'Admin':
+                return view('user.admin_home');
+            break;
+            case 'Manager':
+                return view('user.manager_home');
+            break;
+            case 'Master Distributor':
+                return view('user.master_distributor_home');
+            break;
+            case 'Distributor':
+                return view('user.distributor_home');
+            break;
+            case 'Partner':
+                return view('user.partner_home');
+            break;
+            case 'Balance Transfer Distributor':
+                return view('user.balance_transfer_distributor_home');
+            break;
+            case 'Voucher User':
+                return view('user.voucher_user_home');
+            break;
+        }
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -31,6 +59,7 @@ class UserController extends Controller
     {
         //
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,6 +72,7 @@ class UserController extends Controller
         //
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -53,6 +83,7 @@ class UserController extends Controller
     {
         //
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -65,6 +96,7 @@ class UserController extends Controller
         //
     }
 
+
     /**
      * Update the specified resource in storage.
      *
@@ -76,6 +108,7 @@ class UserController extends Controller
     {
         //
     }
+
 
     /**
      * Remove the specified resource from storage.
